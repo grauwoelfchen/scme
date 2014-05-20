@@ -104,3 +104,23 @@
 (format #t "~a~%" (* (* (* (* (* (* 1 -2) 3) -4) 5) -6) 7)) ; -5040
 
 ;; ex. 2.2.2
+; (format #t "~a~%" (+ #(my-vector) '()))
+; => operation + is not defined between #(my-vector) and ()
+; (format #t "~a~%" (+ 0 '()))
+; => operation + is not defined between () and ()
+; (format #t "~a~%" (+ '() '()))
+; => operation + is not defined between 0 and ()
+; (format #t "~a~%" (+ "3" 0))
+; => operation + is not defined between 0 and "3"
+; (format #t "~a~%" (- 0 "1010")) ; => 0
+; => operation - is not defined between 0 and "1010"
+; (format #t "~a~%" (- #t #f))
+; (format #t "~a~%" (- '(1 2 3) '(3)))
+; => operation - is not defined between (1 2 3) and (3)
+; => operation - is not defined between #t and #f
+(format #t "~a~%" (/ 3 0)) ; => +inf.0
+(format #t "~a~%" (/ 0 3)) ; => 0
+; (format #t "~a~%" (/ "0" 3))
+; => operation / is not defined between "0" and 3
+; (format #t "~a~%" (* + -))
+; operation * is not defined between #<subr +> and #<subr ->
