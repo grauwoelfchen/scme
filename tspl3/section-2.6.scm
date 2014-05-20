@@ -1,5 +1,5 @@
 ;; Section 2.6. Top-Level Definition
-;; http://www.scheme.com/tspl4/start.html#./start:h6
+;; http://www.scheme.com/tspl3/start.html#./start:h6
 
 (define double-any
   (lambda (f x)

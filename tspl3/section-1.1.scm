@@ -1,5 +1,5 @@
 ;; Section 1.1. Scheme Syntax
-;; http://www.scheme.com/tspl4/intro.html#./intro:h1
+;; http://www.scheme.com/tspl3/intro.html#./intro:h1
 
 -1
 "hi"

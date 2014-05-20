@@ -2,6 +2,7 @@
 
 Exersize note of reading following book
 
+* [The Scheme Programming Language](http://www.scheme.com/tspl3/) as `tspl3`
 * [The Scheme Programming Language](http://www.scheme.com/tspl4/) as `tspl4`
 
 
