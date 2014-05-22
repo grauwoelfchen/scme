@@ -157,3 +157,53 @@
 (format #t "~a~%" (+ '2 '3)) ; => 5
 ; n
 (format #t "~a~%" (+ (car '(2 3)) (car (cdr '(2 3))))) ; => 5
+; o
+(format #t "~a~%" ((car (list + - * /)) 2 3)) ; => 5
+
+;; ex. 2.2.4.
+(format #t "~%;; ex. 2.2.4. ~%~%")
+
+(format #t "~a~%" (car (car '((a b) (c d))))) ; => a
+(format #t "~a~%" (car (cdr (car '((a b) (c d)))))) ; => b
+(format #t "~a~%" (car (car (cdr '((a b) (c d)))))) ; => c
+(format #t "~a~%" (car (cdr (car (cdr '((a b) (c d))))))) ; => d
+
+;; ex. 2.2.5.
+(format #t "~%;; ex. 2.2.5. ~%~%")
+; car
+(format #t "~a~%" (car '((a b) (c d)))) ; => (a b)
+; cdr
+(format #t "~a~%" (cdr '((a b) (c d)))) ; => ((c d))
+; car car
+(format #t "~a~%" (car (car '((a b) (c d))))) ; => a
+; cdr cdr
+(format #t "~a~%" (cdr (cdr '((a b) (c d))))) ; => ()
+; car cdr
+(format #t "~a~%" (car (cdr '((a b) (c d))))) ; => (c d)
+; cdr car
+(format #t "~a~%" (cdr (car '((a b) (c d))))) ; => (b)
+; car car car
+;(format #t "~a~%" (car (car (car '((a b) (c d)))))) ; => error by car of a
+; car car cdr
+(format #t "~a~%" (car (car (cdr '((a b) (c d)))))) ; => c
+; car cdr cdr
+;(format #t "~a~%" (car (cdr (cdr '((a b) (c d)))))) ; => error by cdr of ()
+; cdr cdr cdr
+;(format #t "~a~%" (cdr (cdr (cdr '((a b) (c d)))))) ; => error by cdr of ()
+; cdr cdr car
+(format #t "~a~%" (cdr (cdr (car '((a b) (c d)))))) ; => ()
+; car cdr car
+(format #t "~a~%" (car (cdr (car '((a b) (c d)))))) ; => b
+; cdr car car
+; (format #t "~a~%" (cdr (car (car '((a b) (c d)))))) ; => error by cdr of a
+; cdr car cdr
+(format #t "~a~%" (cdr (car (cdr '((a b) (c d)))))) ; => (d)
+; car cdr car cdr
+(format #t "~a~%" (car (cdr (car (cdr '((a b) (c d))))))) ; => d
+
+;; ex. 2.2.6.
+(format #t "~%;; ex. 2.2.6. ~%~%")
+;; The expression takes function or macro name as first element, and takes 0 or some argments as remains elements.
+;; If argument is also expression, then it will be evaluated before will be passed to funciton.
+;; If argument is data, it will be passed to funciton without evaluation.
+;; The expression returns single value or some values.
