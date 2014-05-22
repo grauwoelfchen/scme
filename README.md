@@ -1,12 +1,22 @@
-# Scheme exersize (scm)
+# Scheme exercise (scm)
 
-Exersize note of reading following book
+My scheme exercise project.  
+There are reading notes following books
 
 * [The Scheme Programming Language](http://www.scheme.com/tspl3/) as `tspl3`
 * [The Scheme Programming Language](http://www.scheme.com/tspl4/) as `tspl4`
 
 
-## More ?
+## Scheme
+
+* [MIT/GNU Scheme](http://groups.csail.mit.edu/mac/projects/scheme/)
+  * [MIT/GNU Scheme](http://www.gnu.org/software/mit-scheme/)
+* [Gauche](http://practical-scheme.net/gauche/)
+
+
+## More documents ?
+
+Next :)
 
 * [Teach Yourself Scheme in Fixnum Days](http://www.ccs.neu.edu/home/dorai/t-y-scheme/t-y-scheme.html)
 * [How to Use Scheme](http://www.htus.org/Book/2001-11-13/)
