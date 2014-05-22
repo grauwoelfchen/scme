@@ -12,10 +12,3 @@
 (format #t "~a~%" (two-values)) ; => 1
 (format #t "~a~%" (values-ref (values 1 2 3) 1)) ; => 2
 (format #t "~a~%" (call-with-values two-values list)) ; => (1 2 3)
-
-;; vector-set
-(define my-vector
-  #(my vector-value))
-
-(format #t "~a~%" (vector-set! my-vector 1 #\a)) ; => #<undef>
-(format #t "~a~%" my-vector) ; => #(my a)

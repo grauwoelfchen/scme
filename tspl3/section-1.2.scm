@@ -35,3 +35,10 @@
 (let ((v #(cat dog)))
   (vector-set! v 0 "penguin")
   (format #t "~a~%" v)) ; => (penguin dog)
+
+;; vector-set
+(define my-vector
+  #(my vector-value))
+
+(format #t "~a~%" (vector-set! my-vector 1 #\a)) ; => #<undef>
+(format #t "~a~%" my-vector) ; => #(my a)
