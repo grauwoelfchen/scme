@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;; Section 2.1 Interaction with Scheme
 ;; http://www.scheme.com/tspl3/start.html#./start:h1
 
