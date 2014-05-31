@@ -30,3 +30,12 @@
 (format #t "~a~%" (cdr (list + - * /))) ; => (#<subr -> #<subr *> #<subr />)
 (format #t "~a~%" (car (list - * /))) ; #<subr ->
 (format #t "~a~%" (- 17 5)) ; => 12
+
+;; b. (cons (quote -) (cdr (quote (+ b c))))
+(format #t "~a~%" (quote (+ b c))) ; => (+ b c)
+(format #t "~a~%" (cdr '(+ b c))) ; => (b c)
+(format #t "~a~%" (quote -)) ; => '-
+(format #t "~a~%" (cons '- '(b c))) ; => (- b c)
+
+;; c. (cdr (cdr '(a b c)))
+(format #t "~a~%" (cdr '(a b c))) ; => (b c)
