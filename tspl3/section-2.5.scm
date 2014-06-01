@@ -110,3 +110,51 @@
 ;;            '(a b (c d))
 ;;            (let ((h (lambda (x y . z) (list x y z))))
 ;;             (h 'a)))
+
+
+;; Exercise
+;; 2.5.1.
+;; a. (let ((f (lambda (x) x))) (f 'a))
+(assert-eq "a"
+           'a
+           (let ((f (lambda (x) x)))
+            (f 'a)))
+
+;; b. (let ((f (lambda x x))) (f 'a))
+(assert-eq "(a)"
+           '(a)
+           (let ((f (lambda x x)))
+            (f 'a)))
+
+;; c. (let ((f (lambda (x . y) x))) (f 'a))
+(assert-eq "a"
+           'a
+           (let ((f (lambda (x . y) x)))
+            (f 'a)))
+(format #t "y: ~a~%" (let ((f (lambda (x . y) y))) (f 'a)))
+
+;; d. (let ((f (lambda (x . y) y))) (f 'a))
+(assert-eq "empty list"
+           '()
+           (let ((f (lambda (x . y) y)))
+            (f 'a)))
+
+;; 2.5.2.
+;; list returns just arguments as proper list
+(format #t "~a~%" (let ((f (lambda x x))) (f 1 2 3 4 5))) ; => (1 2 3 4 5)
+
+
+;; 2.5.3.
+;; a. (lambda (f x) (f x))
+
+;; b. (lambda (x) (+ x x))
+;; +
+
+;; c. (lambda (x y) (f x y))
+;; f
+
+;; d. (lambda (x) (cons x (f x y)))
+;; cons, f, y
+
+;; e. (lambda (x) (let ((y (cons x y))) (list x y z)))
+;; x, y (outer of let), list, z
