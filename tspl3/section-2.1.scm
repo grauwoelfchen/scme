@@ -5,8 +5,9 @@
 ;; e.g. racket, gosh
 
 ;; load wihout extension
-(load "./section-1.3")
-(load "./section-1.3.scm")
+(add-load-path "." :relative)
+(load "section-1.3")
+(load "section-1.3.scm")
 
 (format #t "------~%")
 
@@ -36,7 +37,7 @@
 (format #t "~a~%" (square 0.5)) ; => 0.25
 (format #t "~a~%" (square -1/2)) ; => 1/4
 
-(load "./reciprocal.ss")
+(load "reciprocal.ss")
 
 (format #t "~a~%" (reciprocal 10)) ; => 1/10
 (format #t "~a~%" (reciprocal 1/10)) ; => 10

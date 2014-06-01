@@ -35,7 +35,8 @@
                     (f 'b)))) ; => (a b)
 
 ;; tiny test framework :)
-(load "./test.ss")
+(add-load-path "../util" :relative)
+(load "test")
 
 ;; test for test
 (assert-eq "This will fail :D"
